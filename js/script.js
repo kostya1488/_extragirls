@@ -1,12 +1,18 @@
 // ------------------------------- smooth scrolling
+// $(function() {
+
+//     $('.some_link').on('click', function(e) {
+//         $('html,body').stop().animate({ scrollTop: $($(this).attr('href')).offset().top }, 300);
+//         e.preventDefault();
+//     });
+// });
 $(function() {
 
-    $('.menu_item').on('click', function(e) {
+    $('a').on('click', function(e) {
         $('html,body').stop().animate({ scrollTop: $($(this).attr('href')).offset().top }, 300);
         e.preventDefault();
     });
 });
-
 $('.menu_item').click(function(e) {
     e.preventDefault();
 

@@ -1,1307 +1,1298 @@
-    // ---------------------------------------------------------- mixins ------------------------
-    @mixin brand_bg_color {
-        background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
+// ---------------------------------------------------------- mixins ------------------------
+@mixin brand_bg_color {
+    background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
+}
+
+// ========================================================== / mixins ======================
+// ---------------------------------------------------------- variables ---------------------
+// --------------------------------- font
+$main_font: 'Open Sans',
+sans-serif;
+// --------------------------------- color
+$main_brand_color: #B31217;
+// --------------------------------- screen size
+$screen_xs_max: 575px;
+$screen_sm_max: 767px;
+$screen_md_max: 991px;
+$screen_lg_max: 1999px;
+$screen_sm: 576px;
+$screen_md: 768px;
+$screen_lg: 992px;
+$screen_xl: 1200px;
+// ========================================================== / variables ===================
+// ---------------------------------------------------------- commons -----------------------
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $main_font;
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @media (max-width: $screen_xs_max) {
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
-    
-    // ========================================================== / mixins ======================
-    // ---------------------------------------------------------- variables ---------------------
-    // --------------------------------- font
-    $main_font: 'Open Sans',
-    sans-serif;
-    // --------------------------------- color
-    $main_brand_color: #B31217;
-    // --------------------------------- screen size
-    $screen_xs_max: 575px;
-    $screen_sm_max: 767px;
-    $screen_md_max: 991px;
-    $screen_lg_max: 1999px;
-    $screen_sm: 576px;
-    $screen_md: 768px;
-    $screen_lg: 992px;
-    $screen_xl: 1200px;
-    // ========================================================== / variables ===================
-    // ---------------------------------------------------------- commons -----------------------
-    * {
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: $main_font;
-    }
-    
-    section {
-        padding-top: 100px;
-        padding-bottom: 100px;
-        @media (max-width: $screen_xs_max) {
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
-    }
-    
-    a {
-        text-decoration: none;
-        color: #fff;
-    }
-    
-    .section_title {
-        font-size: 50px;
-        line-height: 52px;
-        color: $main_brand_color;
-        font-weight: 700;
-        margin-bottom: 54px;
-        @media (max-width: $screen_xs_max) {
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 32px;
-            text-align: center;
-            margin-bottom: 12px;
-        }
-    }
-    
-    .wrapper {
-        width: 100%;
-        max-width: 1216px;
-        margin: 0 auto;
-    }
-    
-    .btn {
-        display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.section_title {
+    font-size: 50px;
+    line-height: 52px;
+    color: $main_brand_color;
+    font-weight: 700;
+    margin-bottom: 54px;
+    @media (max-width: $screen_xs_max) {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
         text-align: center;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 24px;
-        border-radius: 5px;
-        &__main {
-            border: none;
-            padding: 16px 0;
-            width: 261px;
-            color: #fff;
-            @include brand_bg_color();
-        }
-        &__secondary {
-            padding: 14px 0;
-            width: 257px;
-            border: 2px solid $main_brand_color;
-            color: $main_brand_color;
-        }
-        @media (max-width: $screen_xs_max) {
-            width: 100%;
-            font-size: 16px;
-        }
+        margin-bottom: 12px;
     }
-    
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1216px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 5px;
+    &__main {
+        border: none;
+        padding: 16px 0;
+        width: 261px;
+        color: #fff;
+        @include brand_bg_color();
+    }
+    &__secondary {
+        padding: 14px 0;
+        width: 257px;
+        border: 2px solid $main_brand_color;
+        color: $main_brand_color;
+    }
+    @media (max-width: $screen_xs_max) {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+.inner_wrapper {
     @media (max-width: $screen_xl) {
-        .inner_wrapper {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+        padding-left: 20px;
+        padding-right: 20px;
     }
-    
     @media (max-width: 360px) {
-        .inner_wrapper {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
+        padding-left: 10px;
+        padding-right: 10px;
     }
-    
-    // ========================================================== / commons =====================
-    // ---------------------------------------------------------- section_intro -----------------
-    .section_intro {
-        padding-top: 0;
-        padding-bottom: 0;
-        display: flex;
-        flex-direction: column;
-        .logo {
-            img {
-                width: 69px;
-                @media (max-width: $screen_xs_max) {
-                    width: 41px;
-                }
+}
+
+// ========================================================== / commons =====================
+// ---------------------------------------------------------- section_intro -----------------
+.section_intro {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    .logo {
+        img {
+            width: 69px;
+            @media (max-width: $screen_xs_max) {
+                width: 41px;
             }
         }
-        @media (max-width: $screen_lg_max) {
-            height: 100vh;
-        }
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            margin-top: 26px;
+    }
+    @media (max-width: $screen_lg_max) {
+        height: 100vh;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        margin-top: 26px;
+        display: flex;
+        nav {
+            width: 100%;
             display: flex;
-            nav {
-                width: 100%;
+            align-items: center;
+            justify-content: flex-end;
+            .menu_box {
                 display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                .menu_box {
-                    display: flex;
-                    .menu_item {
-                        font-size: 18px;
-                        line-height: 25px;
-                    }
-                    @media (min-width: $screen_lg) {
-                        li+li {
-                            margin-left: 57px;
-                        }
-                        .active {
-                            font-weight: bold;
-                            &:after {
-                                content: "";
-                                display: block;
-                                width: 50%;
-                                padding-top: 8px;
-                                border-bottom: 3px solid #C61D20;
-                            }
-                        }
-                    }
+                .menu_item {
+                    font-size: 18px;
+                    line-height: 25px;
                 }
-                #menu_toggle {
-                    display: none;
-                }
-                @media (max-width: $screen_md_max) {
-                    #menu_toggle {
-                        opacity: 0;
-                        &:checked~.menu_btn {
-                            position: fixed;
-                        }
-                        &:checked~.menu_btn>span {
-                            transform: rotate(45deg);
-                            background-color: $main_brand_color;
-                        }
-                        &:checked~.menu_btn>span::before {
-                            top: 0;
-                            transform: rotate(0);
-                            background-color: $main_brand_color;
-                        }
-                        &:checked~.menu_btn>span::after {
-                            top: 0;
-                            transform: rotate(90deg);
-                            background-color: $main_brand_color;
-                        }
-                        &:checked~.menu_box {
-                            visibility: visible;
-                            left: 0;
-                        }
-                    }
-                    .menu_btn {
-                        display: flex;
-                        align-items: center;
-                        position: absolute;
-                        top: 30px;
-                        right: 20px;
-                        width: 26px;
-                        height: 26px;
-                        cursor: pointer;
-                        z-index: 101;
-                        &>span,
-                        &>span::before,
-                        &>span::after {
-                            display: block;
-                            position: absolute;
-                            right: 0;
-                            width: 20px;
-                            height: 4px;
-                            border-radius: 4px;
-                            background-color: #fff;
-                            transition-duration: .25s;
-                        }
-                        &>span {
-                            width: 70%;
-                        }
-                        &>span::before {
-                            content: '';
-                            top: -10px;
-                            width: 26px;
-                        }
-                        &>span::after {
-                            content: '';
-                            top: 10px;
-                            width: 26px;
-                        }
-                    }
-                    .menu_box {
-                        display: block;
-                        position: fixed;
-                        visibility: hidden;
-                        top: 0;
-                        left: 100%;
-                        width: 100%;
-                        // height: 239px;
-                        margin-left: 30%;
-                        background: #FFFFFF;
-                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                        border-radius: 0 0 0 10px;
-                        transition-duration: .4s;
-                        padding: 52px 55px 36px;
-                        z-index: 100;
-                    }
-                    .menu_item {
-                        display: inline-block;
-                        // padding: 12px 24px;
-                        // color: #333;
-                        // font-size: 20px;
-                        // font-weight: 600;
-                        // text-decoration: none;
-                        font-weight: 600;
-                        font-size: 16px;
-                        line-height: 21px;
-                        color: #000000;
-                        transition-duration: .25s;
-                        // margin-left: 0;
-                        margin-bottom: 16px;
+                @media (min-width: $screen_lg) {
+                    li+li {
+                        margin-left: 57px;
                     }
                     .active {
                         font-weight: bold;
-                        margin-bottom: 12px;
                         &:after {
                             content: "";
                             display: block;
-                            width: 40px;
-                            padding-top: 4px;
+                            width: 50%;
+                            padding-top: 8px;
                             border-bottom: 3px solid #C61D20;
                         }
                     }
                 }
-                @media (min-width: $screen_md) and (max-width: $screen_md_max) {
-                    .menu_box {
-                        margin-left: 70%;
+            }
+            #menu_toggle {
+                display: none;
+            }
+            @media (max-width: $screen_md_max) {
+                #menu_toggle {
+                    opacity: 0;
+                    &:checked~.menu_btn {
+                        position: fixed;
                     }
+                    &:checked~.menu_btn>span {
+                        transform: rotate(45deg);
+                        background-color: $main_brand_color;
+                    }
+                    &:checked~.menu_btn>span::before {
+                        top: 0;
+                        transform: rotate(0);
+                        background-color: $main_brand_color;
+                    }
+                    &:checked~.menu_btn>span::after {
+                        top: 0;
+                        transform: rotate(90deg);
+                        background-color: $main_brand_color;
+                    }
+                    &:checked~.menu_box {
+                        visibility: visible;
+                        left: 0;
+                    }
+                }
+                .menu_btn {
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    top: 30px;
+                    right: 20px;
+                    width: 26px;
+                    height: 26px;
+                    cursor: pointer;
+                    z-index: 101;
+                    &>span,
+                    &>span::before,
+                    &>span::after {
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        width: 20px;
+                        height: 4px;
+                        border-radius: 4px;
+                        background-color: #fff;
+                        transition-duration: .25s;
+                    }
+                    &>span {
+                        width: 70%;
+                    }
+                    &>span::before {
+                        content: '';
+                        top: -10px;
+                        width: 26px;
+                    }
+                    &>span::after {
+                        content: '';
+                        top: 10px;
+                        width: 26px;
+                    }
+                }
+                .menu_box {
+                    display: block;
+                    position: fixed;
+                    visibility: hidden;
+                    top: 0;
+                    left: 100%;
+                    width: 100%;
+                    margin-left: 30%;
+                    background: #FFFFFF;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    border-radius: 0 0 0 10px;
+                    transition-duration: .4s;
+                    padding: 52px 55px 36px;
+                    z-index: 100;
+                }
+                .menu_item {
+                    display: inline-block;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 21px;
+                    color: #000000;
+                    transition-duration: .25s;
+                    margin-bottom: 16px;
+                }
+                .active {
+                    font-weight: bold;
+                    margin-bottom: 12px;
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 40px;
+                        padding-top: 4px;
+                        border-bottom: 3px solid #C61D20;
+                    }
+                }
+            }
+            @media (min-width: $screen_md) and (max-width: $screen_md_max) {
+                .menu_box {
+                    margin-left: 70%;
+                }
+            }
+        }
+    }
+    .intro_banner {
+        background: url(../assets/banner.jpg) no-repeat 86% 0%;
+        background-size: cover;
+        height: 100%;
+        @media (max-width: $screen_xs_max) {
+            background-position: 84% 100%;
+        }
+    }
+    .preview_outer {
+        display: flex;
+        justify-content: center;
+        .preview {
+            color: #000;
+            display: flex;
+            color: #000;
+            flex-direction: column;
+            justify-content: space-between;
+            @media (max-width: $screen_md_max) {
+                align-items: center;
+                height: 278px;
+                max-width: 500px;
+            }
+            &__title {
+                margin-top: 3vh;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 31px;
+            }
+            &__description {
+                font-size: 16px;
+                line-height: 23px;
+            }
+            .btn {
+                margin-bottom: 3vh;
+            }
+        }
+    }
+    @media (min-width: $screen_lg) {
+        .preview_outer {
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            .preview {
+                color: #fff;
+                &__title {
+                    max-width: 538px;
+                    font-weight: bold;
+                    font-size: 40px;
+                    line-height: 47px;
+                }
+                &__description {
+                    margin-top: 16px;
+                    max-width: 385px;
+                    font-size: 18px;
+                    line-height: 25px;
+                    margin-bottom: 38px;
                 }
             }
         }
         .intro_banner {
-            background: url(../assets/img/banner.jpg) no-repeat 86% 0%;
-            background-size: cover;
-            height: 100%;
-            @media (max-width: $screen_xs_max) {
-                background-position: 84% 100%;
-            }
+            height: 100vh;
         }
-        .preview_outer {
+    }
+}
+
+// ========================================================== / section_intro ===============
+// ---------------------------------------------------------- section_advantages ------------
+.section_advantages {
+    .advantages_area {
+        display: flex;
+        flex-direction: column;
+    }
+    .advantages_item {
+        &__icon {
+            border: 3px solid $main_brand_color;
+            border-radius: 3.125px;
+            width: 56px;
+            height: 56px;
             display: flex;
             justify-content: center;
-            .preview {
-                color: #000;
+            align-items: center;
+        }
+        &__title {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 40px;
+            margin-top: 20px;
+        }
+        &__description {
+            font-size: 18px;
+            line-height: 25px;
+            margin-top: 14px;
+        }
+        @media (min-width: $screen_sm) {
+            background: #FFFFFF;
+            box-shadow: 0px 6.76923px 33.8462px rgba(0, 0, 0, 0.15);
+            border-radius: 8.46154px;
+            max-width: 360px;
+            padding: 80px 40px;
+        }
+        @media (max-width: $screen_xs_max) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 76px;
+            &__description {
+                width: 280px;
+                text-align: center;
+            }
+        }
+    }
+    @media (min-width: $screen_lg) {
+        .advantages_area {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .advantages_item+.advantages_item {
+            margin-left: 15px;
+        }
+    }
+    @media (min-width: $screen_sm) and (max-width: $screen_md_max) {
+        .advantages_area {
+            align-items: center;
+            .advantages_item+.advantages_item {
+                margin-top: 30px;
+            }
+        }
+    }
+    .section_title {
+        @media (max-width: $screen_xs_max) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// ========================================================== / section_advantages ==========
+// ---------------------------------------------------------- section_about -----------------
+.section_about {
+    background: rgba(242, 242, 242, 0.4);
+    .section_about_inner {
+        display: flex;
+        flex-direction: column;
+        .about_promo_images {
+            // flex: 1;
+            position: relative;
+            padding: 33px 33px 33px 0;
+            margin-left: 33px;
+            img {
+                position: relative;
+                z-index: 10;
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: block;
+                height: 100px;
+                width: 100px;
+                @include brand_bg_color();
+                border-radius: 10px;
+                transform: matrix(-1, 0, 0, 1, 0, 0);
+                z-index: 5;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: -33px;
+                display: block;
+                width: 275px;
+                height: 172px;
+                z-index: 5;
+                background: url(../assets/about_2.jpg) no-repeat 0 0;
+                background-size: cover;
+                border-radius: 10px;
+                z-index: 15;
+                @media (max-width: $screen_xs_max) {
+                    width: 156px;
+                    height: 98px;
+                }
+            }
+        }
+        .about_promo_text {
+            // flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            max-width: 500px;
+            padding: 33px 0 33px;
+            &__description {
+                margin-bottom: 58px;
+                font-size: 18px;
+                line-height: 25px;
+                @media (max-width: $screen_xs_max) {
+                    font-size: 16px;
+                    line-height: 23px;
+                    margin-bottom: 0;
+                }
+            }
+            @media (min-width: $screen_lg) {
+                margin-left: 92px;
+            }
+        }
+        .about_promo_button {
+            @media (max-width: $screen_xs_max) {
+                display: none;
+            }
+        }
+        @media (min-width: $screen_lg) {
+            flex-direction: row;
+        }
+    }
+    @media (max-width: $screen_xs_max) {
+        background-color: #fff;
+        padding-bottom: 0;
+    }
+}
+
+// ========================================================== / section_about ===============
+// ---------------------------------------------------------- section_reviews ---------------
+.section_reviews {
+    position: relative;
+    padding: 50px 20px;
+    .mob_v_title_block {
+        display: none;
+    }
+    .desctop_v_title_block {
+        margin-bottom: 26px;
+    }
+    @media (max-width: $screen_xs_max) {
+        padding: 50px 20px 20px;
+        .desctop_v_title_block {
+            display: none;
+        }
+        .mob_v_title_block {
+            display: block;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0 85%, 100% 30%, 100% 100%, 0% 100%);
+        @include brand_bg_color();
+        z-index: 5;
+        @media (max-width: $screen_xs_max) {
+            clip-path: polygon(0 85%, 100% 10%, 100% 100%, 0% 100%);
+            // z-index: 15;
+        }
+    }
+    .reviews_outer {
+        position: relative;
+        background: #FAFAFA;
+        border-radius: 10px;
+        z-index: 15;
+        @media (min-width: $screen_sm) {
+            padding: 80px 100px;
+        }
+        @media (max-width: $screen_xs_max) {
+            background-color: #fff;
+        }
+    }
+    .reviews_title {
+        @media (min-width: $screen_sm) {
+            margin-bottom: 24px;
+        }
+    }
+    .reviews_subtitle {
+        font-size: 30px;
+        line-height: 40px;
+        color: rgba(58, 58, 58, 0.83);
+        margin-bottom: 10px;
+        @media (max-width: $screen_xs_max) {
+            font-size: 20px;
+            line-height: 26px;
+            text-align: center;
+        }
+    }
+    .reviews_subtitle_area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: $screen_sm) and (max-width: $screen_md_max) {
+            .reviews_item+.reviews_item {
+                margin-top: 53px;
+            }
+        }
+        @media (max-width: $screen_xs_max) {
+            align-items: center;
+            background: #FAFAFA;
+            border-radius: 10px;
+            padding: 67px 25px;
+            .reviews_item {
                 display: flex;
-                color: #000;
                 flex-direction: column;
-                justify-content: space-between;
-                @media (max-width: $screen_md_max) {
-                    align-items: center;
-                    height: 278px;
-                    max-width: 500px;
+                align-items: center;
+                &+.reviews_item {
+                    border-top: 1px solid rgba(0, 0, 0, 0.25);
+                    padding-top: 32px;
+                    margin-top: 32px;
+                }
+                &__photo {
+                    height: 54px;
+                    width: 54px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
                 }
                 &__title {
-                    margin-top: 3vh;
-                    font-weight: bold;
-                    font-size: 24px;
-                    line-height: 31px;
+                    font-weight: 600;
+                    font-size: 21px;
+                    line-height: 30px;
+                    text-transform: uppercase;
+                    color: $main_brand_color;
+                    margin: 16px 0 4px;
                 }
                 &__description {
                     font-size: 16px;
                     line-height: 23px;
+                    text-align: center;
+                    // color: rgba(0, 0, 0, 0.9);
                 }
-                .btn {
-                    margin-bottom: 3vh;
+            }
+        }
+        @media (min-width: $screen_sm) {
+            .reviews_item {
+                position: relative;
+                max-width: 280px;
+                padding: 48px 27px;
+                background: #FFFFFF;
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+                border-radius: 5px;
+                margin-top: 33px;
+                &__photo {
+                    position: absolute;
+                    top: -33px;
+                    left: 50%;
+                    margin-left: -41px;
+                    height: 82px;
+                    width: 82px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                &__title {
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 21px;
+                    line-height: 30px;
+                    text-transform: uppercase;
+                    color: $main_brand_color;
+                    margin: 20px 0;
+                }
+                &__description {
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: rgba(0, 0, 0, 0.9);
                 }
             }
         }
         @media (min-width: $screen_lg) {
-            .preview_outer {
-                position: absolute;
-                top: 40%;
-                left: 30%;
-                .preview {
-                    color: #fff;
-                    &__title {
-                        max-width: 538px;
-                        font-weight: bold;
-                        font-size: 40px;
-                        line-height: 47px;
-                    }
-                    &__description {
-                        margin-top: 16px;
-                        max-width: 385px;
-                        font-size: 18px;
-                        line-height: 25px;
-                        margin-bottom: 38px;
-                    }
-                }
-            }
-            .intro_banner {
-                height: 100vh;
+            flex-direction: row;
+            justify-content: space-between;
+            .reviews_item+.reviews_item {
+                margin-left: 10px;
             }
         }
     }
-    
-    // ========================================================== / section_intro ===============
-    // ---------------------------------------------------------- section_advantages ------------
-    .section_advantages {
-        .advantages_area {
-            display: flex;
-            flex-direction: column;
+}
+
+// ========================================================== / section_reviews =============
+// ---------------------------------------------------------- section_requirements ----------
+.section_requirements {
+    background: rgba(169, 211, 238, 0.29);
+    @media (min-width: $screen_sm) and (max-width: $screen_md_max) {
+        .requirements_photo {
+            justify-content: center;
         }
-        .advantages_item {
-            &__icon {
-                border: 3px solid $main_brand_color;
-                border-radius: 3.125px;
-                width: 56px;
-                height: 56px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+        .section_title {
+            margin-top: 30px;
+        }
+        .requirements_text__buttons {
+            justify-content: center;
+        }
+    }
+    @media (max-width: $screen_xs_max) {
+        .section_title {
+            text-align: start;
+        }
+    }
+    .requirements_wrap {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: $screen_lg) {
+            flex-direction: row;
+        }
+    }
+    .requirements_photo {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        .photo_area {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            max-width: 489px;
+            width: 100%;
+            height: 447px;
+            border-radius: 10px;
+            @include brand_bg_color();
+            @media (max-width: $screen_xs_max) {
+                max-height: 300px;
+                margin-bottom: 30px;
+            }
+            img {
+                width: auto;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .requirements_text {
+        flex: 1;
+        padding-left: 15px;
+        @media (max-width: $screen_xs_max) {
+            padding-left: 0;
+        }
+        &__title {
+            color: #13366C;
+            margin-bottom: 24px;
+            @media (max-width: $screen_xs_max) {
+                margin-bottom: 18px;
+            }
+        }
+        &__subtitle {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            color: $main_brand_color;
+            margin-bottom: 36px;
+            @media (max-width: $screen_xs_max) {
+                font-size: 16px;
+                line-height: 21px;
+                margin-bottom: 31px;
+            }
+        }
+        &__list {
+            padding: 0;
+            list-style: none;
+            margin-top: 0;
+            margin-bottom: 36px;
+            @media (max-width: $screen_xs_max) {
+                margin-bottom: 0;
+            }
+            li {
+                position: relative;
+                font-size: 18px;
+                line-height: 25px;
+                margin-bottom: 15px;
+                padding-left: 30px;
+                img {
+                    top: 1px;
+                    left: 0;
+                    position: absolute;
+                }
+                @media (max-width: $screen_xs_max) {
+                    font-size: 16px;
+                    line-height: 23px;
+                }
+            }
+        }
+        &__buttons {
+            display: flex;
+            .btn+.btn {
+                margin-left: 20px;
+            }
+            @media (max-width: $screen_xs_max) {
+                .btn__secondary {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// ========================================================== / section_requirements ========
+// ---------------------------------------------------------- section_vacancies -------------
+.section_vacancies {
+    .section_title,
+    .vacancies_button {
+        text-align: center;
+    }
+    .vacancies_area {
+        display: flex;
+        justify-content: space-between;
+        .vacancies_item {
+            max-width: 280px;
+            &__banner {
+                overflow: hidden;
+                max-height: 300px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.19);
+                margin-bottom: 10px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                @media (min-width: $screen_xl) {
+                    max-height: 360px;
+                }
             }
             &__title {
                 font-weight: 600;
                 font-size: 30px;
                 line-height: 40px;
-                margin-top: 20px;
+                color: $main_brand_color;
+                margin-bottom: 15px;
             }
             &__description {
                 font-size: 18px;
                 line-height: 25px;
-                margin-top: 14px;
-            }
-            @media (min-width: $screen_sm) {
-                background: #FFFFFF;
-                box-shadow: 0px 6.76923px 33.8462px rgba(0, 0, 0, 0.15);
-                border-radius: 8.46154px;
-                max-width: 360px;
-                padding: 80px 40px;
-            }
-            @media (max-width: $screen_xs_max) {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-top: 76px;
-                &__description {
-                    width: 280px;
-                    text-align: center;
-                }
+                color: #000000;
             }
         }
-        @media (min-width: $screen_lg) {
-            .advantages_area {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            .advantages_item+.advantages_item {
+        margin-bottom: 58px;
+        @media (max-width: $screen_lg_max) {
+            .vacancies_item+.vacancies_item {
                 margin-left: 15px;
             }
         }
-        @media (min-width: $screen_sm) and (max-width: $screen_md_max) {
-            .advantages_area {
-                align-items: center;
-                .advantages_item+.advantages_item {
-                    margin-top: 30px;
-                }
-            }
-        }
-        .section_title {
-            @media (max-width: $screen_xs_max) {
-                margin-bottom: 0;
-            }
-        }
-    }
-    
-    // ========================================================== / section_advantages ==========
-    // ---------------------------------------------------------- section_about -----------------
-    .section_about {
-        background: rgba(242, 242, 242, 0.4);
-        .section_about_inner {
-            display: flex;
-            flex-direction: column;
-            .about_promo_images {
-                // flex: 1;
-                position: relative;
-                padding: 33px 33px 33px 0;
-                margin-left: 33px;
-                img {
-                    position: relative;
-                    z-index: 10;
-                    border-radius: 10px;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    display: block;
-                    height: 100px;
-                    width: 100px;
-                    @include brand_bg_color();
-                    border-radius: 10px;
-                    transform: matrix(-1, 0, 0, 1, 0, 0);
-                    z-index: 5;
-                }
-                &::after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    left: -33px;
-                    display: block;
-                    width: 275px;
-                    height: 172px;
-                    z-index: 5;
-                    background: url(../assets/about/about_2.jpg) no-repeat 0 0;
-                    background-size: cover;
-                    border-radius: 10px;
-                    z-index: 15;
-                    @media (max-width: $screen_xs_max) {
-                        width: 156px;
-                        height: 98px;
-                    }
-                }
-            }
-            .about_promo_text {
-                // flex: 1;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                max-width: 500px;
-                padding: 33px 0 33px;
-                &__description {
-                    margin-bottom: 58px;
-                    font-size: 18px;
-                    line-height: 25px;
-                    @media (max-width: $screen_xs_max) {
-                        font-size: 16px;
-                        line-height: 23px;
-                        margin-bottom: 0;
-                    }
-                }
-                @media (min-width: $screen_lg) {
-                    margin-left: 92px;
-                }
-            }
-            .about_promo_button {
-                @media (max-width: $screen_xs_max) {
-                    display: none;
-                }
-            }
-            @media (min-width: $screen_lg) {
-                flex-direction: row;
-            }
-        }
-        @media (max-width: $screen_xs_max) {
-            background-color: #fff;
-            padding-bottom: 0;
-        }
-    }
-    
-    // ========================================================== / section_about ===============
-    // ---------------------------------------------------------- section_reviews ---------------
-    .section_reviews {
-        position: relative;
-        padding: 50px 20px;
-        .mob_v_title_block {
+        @media (max-width: $screen_md_max) {
             display: none;
         }
-        .desctop_v_title_block {
-            margin-bottom: 26px;
-        }
-        @media (max-width: $screen_xs_max) {
-            padding: 50px 20px 20px;
-            .desctop_v_title_block {
-                display: none;
-            }
-            .mob_v_title_block {
-                display: block;
-            }
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            clip-path: polygon(0 85%, 100% 30%, 100% 100%, 0% 100%);
-            @include brand_bg_color();
-            z-index: 5;
-            @media (max-width: $screen_xs_max) {
-                clip-path: polygon(0 85%, 100% 10%, 100% 100%, 0% 100%);
-                // z-index: 15;
-            }
-        }
-        .reviews_outer {
-            position: relative;
-            background: #FAFAFA;
-            border-radius: 10px;
-            z-index: 15;
-            @media (min-width: $screen_sm) {
-                padding: 80px 100px;
-            }
-            @media (max-width: $screen_xs_max) {
-                background-color: #fff;
-            }
-        }
-        .reviews_title {
-            @media (min-width: $screen_sm) {
-                margin-bottom: 24px;
-            }
-        }
-        .reviews_subtitle {
-            font-size: 30px;
-            line-height: 40px;
-            color: rgba(58, 58, 58, 0.83);
-            margin-bottom: 10px;
-            @media (max-width: $screen_xs_max) {
-                font-size: 20px;
-                line-height: 26px;
-                text-align: center;
-            }
-        }
-        .reviews_subtitle_area {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            @media (min-width: $screen_sm) and (max-width: $screen_md_max) {
-                .reviews_item+.reviews_item {
-                    margin-top: 53px;
-                }
-            }
-            @media (max-width: $screen_xs_max) {
-                align-items: center;
-                background: #FAFAFA;
-                border-radius: 10px;
-                padding: 67px 25px;
-                .reviews_item {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    &+.reviews_item {
-                        border-top: 1px solid rgba(0, 0, 0, 0.25);
-                        padding-top: 32px;
-                        margin-top: 32px;
-                    }
-                    &__photo {
-                        height: 54px;
-                        width: 54px;
-                        border-radius: 50%;
-                        overflow: hidden;
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-                    &__title {
-                        font-weight: 600;
-                        font-size: 21px;
-                        line-height: 30px;
-                        text-transform: uppercase;
-                        color: $main_brand_color;
-                        margin: 16px 0 4px;
-                    }
-                    &__description {
-                        font-size: 16px;
-                        line-height: 23px;
-                        text-align: center;
-                        // color: rgba(0, 0, 0, 0.9);
-                    }
-                }
-            }
-            @media (min-width: $screen_sm) {
-                .reviews_item {
-                    position: relative;
-                    max-width: 280px;
-                    padding: 48px 27px;
-                    background: #FFFFFF;
-                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-                    border-radius: 5px;
-                    margin-top: 33px;
-                    &__photo {
-                        position: absolute;
-                        top: -33px;
-                        left: 50%;
-                        margin-left: -41px;
-                        height: 82px;
-                        width: 82px;
-                        border-radius: 50%;
-                        overflow: hidden;
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-                    &__title {
-                        text-align: center;
-                        font-weight: 600;
-                        font-size: 21px;
-                        line-height: 30px;
-                        text-transform: uppercase;
-                        color: $main_brand_color;
-                        margin: 20px 0;
-                    }
-                    &__description {
-                        font-size: 18px;
-                        line-height: 25px;
-                        color: rgba(0, 0, 0, 0.9);
-                    }
-                }
-            }
-            @media (min-width: $screen_lg) {
-                flex-direction: row;
-                justify-content: space-between;
-                .reviews_item+.reviews_item {
-                    margin-left: 10px;
-                }
-            }
-        }
     }
-    
-    // ========================================================== / section_reviews =============
-    // ---------------------------------------------------------- section_requirements ----------
-    .section_requirements {
-        background: rgba(169, 211, 238, 0.29);
-        @media (min-width: $screen_sm) and (max-width: $screen_md_max) {
-            .requirements_photo {
-                justify-content: center;
-            }
-            .section_title {
-                margin-top: 30px;
-            }
-            .requirements_text__buttons {
-                justify-content: center;
-            }
-        }
-        @media (max-width: $screen_xs_max) {
-            .section_title {
-                text-align: start;
-            }
-        }
-        .requirements_wrap {
-            display: flex;
-            flex-direction: column;
-            @media (min-width: $screen_lg) {
-                flex-direction: row;
-            }
-        }
-        .requirements_photo {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            .photo_area {
-                display: flex;
-                justify-content: center;
-                align-items: flex-end;
-                max-width: 489px;
-                width: 100%;
-                height: 447px;
-                border-radius: 10px;
-                @include brand_bg_color();
-                @media (max-width: $screen_xs_max) {
-                    max-height: 300px;
-                    margin-bottom: 30px;
-                }
-                img {
-                    width: auto;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
-        .requirements_text {
-            flex: 1;
-            padding-left: 15px;
-            @media (max-width: $screen_xs_max) {
-                padding-left: 0;
-            }
-            &__title {
-                color: #13366C;
-                margin-bottom: 24px;
-                @media (max-width: $screen_xs_max) {
-                    margin-bottom: 18px;
-                }
-            }
-            &__subtitle {
-                font-weight: 600;
-                font-size: 18px;
-                line-height: 28px;
-                color: $main_brand_color;
-                margin-bottom: 36px;
-                @media (max-width: $screen_xs_max) {
-                    font-size: 16px;
-                    line-height: 21px;
-                    margin-bottom: 31px;
-                }
-            }
-            &__list {
-                padding: 0;
-                list-style: none;
-                margin-top: 0;
-                margin-bottom: 36px;
-                @media (max-width: $screen_xs_max) {
-                    margin-bottom: 0;
-                }
-                li {
-                    position: relative;
-                    font-size: 18px;
-                    line-height: 25px;
-                    margin-bottom: 15px;
-                    padding-left: 30px;
-                    img {
-                        top: 1px;
-                        left: 0;
-                        position: absolute;
-                    }
-                    @media (max-width: $screen_xs_max) {
-                        font-size: 16px;
-                        line-height: 23px;
-                    }
-                }
-            }
-            &__buttons {
-                display: flex;
-                .btn+.btn {
-                    margin-left: 20px;
-                }
-                @media (max-width: $screen_xs_max) {
-                    .btn__secondary {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-    
-    // ========================================================== / section_requirements ========
-    // ---------------------------------------------------------- section_vacancies -------------
-    .section_vacancies {
-        .section_title,
+    @media (max-width: $screen_md_max) {
         .vacancies_button {
-            text-align: center;
+            display: none;
         }
-        .vacancies_area {
-            display: flex;
-            justify-content: space-between;
+    }
+    .swiper-container {
+        display: none;
+        @media (max-width: $screen_md_max) {
+            display: block;
+            .section_title {
+                margin-bottom: 26px;
+            }
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+            }
             .vacancies_item {
-                max-width: 280px;
+                text-align: center;
+                max-width: 400px;
                 &__banner {
                     overflow: hidden;
-                    max-height: 300px;
+                    width: 100%;
+                    max-height: 400px;
                     border-radius: 10px;
-                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.19);
-                    margin-bottom: 10px;
+                    margin-bottom: 14px;
                     img {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
                     }
-                    @media (min-width: $screen_xl) {
-                        max-height: 360px;
-                    }
                 }
                 &__title {
                     font-weight: 600;
-                    font-size: 30px;
-                    line-height: 40px;
+                    font-size: 20px;
+                    line-height: 26px;
                     color: $main_brand_color;
-                    margin-bottom: 15px;
+                    text-align: start;
+                    margin-bottom: 6px;
                 }
                 &__description {
-                    font-size: 18px;
-                    line-height: 25px;
-                    color: #000000;
+                    font-size: 16px;
+                    line-height: 23px;
+                    text-align: start;
                 }
             }
-            margin-bottom: 58px;
-            @media (max-width: $screen_lg_max) {
-                .vacancies_item+.vacancies_item {
-                    margin-left: 15px;
+            .vacancies_button_mob {
+                margin: 25px 0;
+                text-align: center;
+            }
+            .swiper-pagination {
+                position: static;
+                .swiper-pagination-bullet {
+                    &+.swiper-pagination-bullet {
+                        margin-left: 13px;
+                    }
+                    width: 14px;
+                    height: 14px;
+                }
+                .swiper-pagination-bullet-active {
+                    background-color: $main_brand_color;
                 }
             }
-            @media (max-width: $screen_md_max) {
-                display: none;
+        }
+    }
+}
+
+// ========================================================== / section_vacancies ===========
+// ---------------------------------------------------------- section_promo -----------------
+.section_promo {
+    padding-bottom: 0;
+    background: #E6F2FA;
+    .promo_title {
+        display: flex;
+        justify-content: center;
+        .section_title {
+            color: #13366C;
+            max-width: 693px;
+        }
+    }
+    .promo_item {
+        .item_description {
+            @media (max-width: $screen_xs_max) {
+                font-size: 16px;
+                line-height: 21px;
+                text-align: center;
+                color: #13366C;
             }
         }
         @media (max-width: $screen_md_max) {
-            .vacancies_button {
-                display: none;
-            }
+            padding: 50px 0;
         }
-        .swiper-container {
-            display: none;
-            @media (max-width: $screen_md_max) {
-                display: block;
-                .section_title {
-                    margin-bottom: 26px;
-                }
-                .swiper-slide {
-                    display: flex;
-                    justify-content: center;
-                }
-                .vacancies_item {
-                    text-align: center;
-                    max-width: 400px;
-                    &__banner {
-                        overflow: hidden;
-                        width: 100%;
-                        max-height: 400px;
-                        border-radius: 10px;
-                        margin-bottom: 14px;
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-                    &__title {
-                        font-weight: 600;
-                        font-size: 20px;
-                        line-height: 26px;
-                        color: $main_brand_color;
-                        text-align: start;
-                        margin-bottom: 6px;
-                    }
-                    &__description {
-                        font-size: 16px;
-                        line-height: 23px;
-                        text-align: start;
-                    }
-                }
-                .vacancies_button_mob {
-                    margin: 25px 0;
-                    text-align: center;
-                }
-                .swiper-pagination {
-                    position: static;
-                    .swiper-pagination-bullet {
-                        &+.swiper-pagination-bullet {
-                            margin-left: 13px;
-                        }
-                        width: 14px;
-                        height: 14px;
-                    }
-                    .swiper-pagination-bullet-active {
-                        background-color: $main_brand_color;
-                    }
-                }
-            }
-        }
-    }
-    
-    // ========================================================== / section_vacancies ===========
-    // ---------------------------------------------------------- section_promo -----------------
-    .section_promo {
-        padding-bottom: 0;
-        background: #E6F2FA;
-        .promo_title {
-            display: flex;
-            justify-content: center;
-            .section_title {
-                color: #13366C;
-                max-width: 693px;
-            }
-        }
-        .promo_item {
+        @media (min-width: $screen_sm) {
+            position: relative;
+            padding: 100px;
             .item_description {
-                @media (max-width: $screen_xs_max) {
-                    font-size: 16px;
-                    line-height: 21px;
-                    text-align: center;
-                    color: #13366C;
-                }
-            }
-            @media (max-width: $screen_md_max) {
-                padding: 50px 0;
-            }
-            @media (min-width: $screen_sm) {
-                position: relative;
-                padding: 100px;
-                .item_description {
-                    position: absolute;
-                    top: 50%;
-                    left: 7%;
-                    max-width: 300px;
-                    font-weight: 600;
-                    font-size: 20px;
-                    line-height: 40px;
-                    color: #13366C;
-                    z-index: 15;
-                }
-                .item_description_rev {
-                    left: 55%;
-                }
-            }
-            @media (min-width: $screen_lg) {
-                .item_description {
-                    left: 10%;
-                    max-width: 440px;
-                    font-size: 30px;
-                }
-                .item_description_rev {
-                    left: 61%;
-                }
-            }
-        }
-        .promo_item_reverse {
-            .item_wrap {
-                flex-direction: row-reverse;
-                @media (min-width: $screen_md) {
-                    padding: 100px;
-                }
-            }
-        }
-        .item_wrap {
-            display: flex;
-            @media (max-width: $screen_xs_max) {
-                min-height: 200px;
-            }
-            .promo_text {
-                flex: 1;
-                display: flex;
-                align-items: center;
-                &__number {
-                    font-weight: 800;
-                    font-size: 192px;
-                    line-height: 130px;
-                    color: #B5CFE4;
-                    @media (max-width: $screen_sm_max) {
-                        font-size: 136px;
-                        // padding: 20px 0;
-                    }
-                }
-            }
-            .promo_photo {
-                flex: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .photo_wrap {
-                    overflow: hidden;
-                    border-radius: 12px;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                    @media (max-width: $screen_xs_max) {
-                        position: absolute;
-                        right: 11%;
-                    }
-                    @media (min-width: $screen_sm) {
-                        border: 6px solid #D4E9F7;
-                        width: 280px;
-                        height: 280px;
-                    }
-                    @media (max-width: $screen_sm_max) {
-                        width: 180px;
-                        height: 180px;
-                    }
-                    @media (max-width: 360px) {
-                        width: 140px;
-                        height: 140px;
-                    }
-                }
-                .photo_wrap_reverse {
-                    @media (max-width: $screen_xs_max) {
-                        left: 11%;
-                    }
-                }
-            }
-        }
-    }
-    
-    // ========================================================== / section_intro ===============
-    // ---------------------------------------------------------- section_anketa ----------------
-    .section_anketa {
-        .section_title {
-            @media (max-width: $screen_md_max) {
-                margin-bottom: 26px;
-                text-align: start;
-            }
-        }
-        .anketa_area {
-            display: flex;
-            justify-content: center;
-            background: #FBFBFB;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.51);
-            border-radius: 10px;
-            overflow: hidden;
-            .anketa_photo {
-                max-width: 506px;
-                width: 100%;
-                background: url(../assets/photo-1555991415-a6a1dc2f950b1.jpg) no-repeat 50% 50%;
-                @media (max-width: $screen_md_max) {
-                    display: none;
-                }
-            }
-            .anketa_form {
-                @media (min-width: $screen_sm) {
-                    padding: 53px 40px 62px 76px;
-                }
-                @media (max-width: $screen_md_max) {
-                    padding: 25px 20px 30px;
-                }
-                &__title {
-                    font-weight: 600;
-                    font-size: 30px;
-                    line-height: 40px;
-                    color: $main_brand_color;
-                    margin-bottom: 40px;
-                    @media (max-width: $screen_xs_max) {
-                        font-size: 16px;
-                        line-height: 21px;
-                        color: #13366C;
-                        margin-bottom: 20px;
-                    }
-                }
-                .forma {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    input {
-                        width: 100%;
-                        margin-bottom: 15px;
-                        padding: 16px 21px;
-                        background: #FFFFFF;
-                        border: 1px solid rgba(181, 181, 181, 0.47);
-                        border-radius: 5px;
-                        outline: none;
-                        &:focus {
-                            box-shadow: inset 0px 0px 0px 1px rgba(181, 181, 181, 0.47);
-                        }
-                    }
-                    button {
-                        margin-top: 40px;
-                        @media (max-width: $screen_xs_max) {
-                            margin-top: 20px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    // ========================================================== / section_anketa ==============
-    // ---------------------------------------------------------- section_FAQ -------------------
-    .section_FAQ {
-        background: #13366C;
-        .section_title {
-            color: #fff;
-            // max-width: 150px;
-            @media (min-width: $screen_sm) {
-                margin-left: 100px;
-            }
-            @media (max-width: $screen_xs_max) {
-                margin-bottom: 26px;
-            }
-        }
-        .faq_area_item {
-            max-width: 642px;
-            &+.faq_area_item {
-                margin-top: 20px;
-            }
-            .toggle {
-                display: flex;
-                justify-content: space-between;
-                background: #FFFFFF;
-                border-radius: 10px;
-                padding: 12px 27px;
-                width: 100%;
-                font-size: 18px;
-                line-height: 25px;
+                position: absolute;
+                top: 50%;
+                left: 7%;
+                max-width: 300px;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 40px;
                 color: #13366C;
-                img {
-                    margin-left: 8px;
-                }
-                @media (max-width: $screen_xs_max) {
-                    padding: 12px 20px;
-                    font-size: 16px;
-                    line-height: 21px;
-                }
+                z-index: 15;
+            }
+            .item_description_rev {
+                left: 55%;
             }
         }
         @media (min-width: $screen_lg) {
-            .section_FAQ_wrap {
-                display: flex;
-                .faq_area {
-                    margin-left: 300px;
-                    flex: auto;
-                }
+            .item_description {
+                left: 10%;
+                max-width: 440px;
+                font-size: 30px;
+            }
+            .item_description_rev {
+                left: 61%;
             }
         }
-        // --------------------------------
-        .accordion {
-            list-style: none;
-            padding: 0;
-            .toggle {
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.11);
-                img {
-                    transition: .3s;
-                }
-            }
-            .toggle_active {
-                position: relative;
-                z-index: 15;
-                img {
-                    transform: rotate(180deg);
-                }
-            }
-            .inner {
-                position: relative;
-                top: -10px;
-                overflow: hidden;
-                display: none;
-                background: #FFFFFF;
-                border-radius: 0px 0px 10px 10px;
-                padding: 32px 20px 22px;
-                font-size: 16px;
-                line-height: 21px;
-                color: rgba(73, 73, 73, 0.7);
-            }
-        }
-        // --------------------------------
     }
-    
-    // ========================================================== / section_FAQ =================
-    // ---------------------------------------------------------- section_contacts --------------
-    .section_contacts {
-        padding: 0;
+    .promo_item_reverse {
+        .item_wrap {
+            flex-direction: row-reverse;
+            @media (min-width: $screen_md) {
+                padding: 100px;
+            }
+        }
+    }
+    .item_wrap {
         display: flex;
-        flex-direction: row;
-        .logo {
-            width: 320px;
+        @media (max-width: $screen_xs_max) {
+            min-height: 200px;
+        }
+        .promo_text {
+            flex: 1;
             display: flex;
             align-items: center;
-            justify-content: center;
-            img {
-                width: 100px;
+            &__number {
+                font-weight: 800;
+                font-size: 192px;
+                line-height: 130px;
+                color: #B5CFE4;
+                @media (max-width: $screen_sm_max) {
+                    font-size: 136px;
+                    // padding: 20px 0;
+                }
             }
+        }
+        .promo_photo {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .photo_wrap {
+                overflow: hidden;
+                border-radius: 12px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                @media (max-width: $screen_xs_max) {
+                    position: absolute;
+                    right: 11%;
+                }
+                @media (min-width: $screen_sm) {
+                    border: 6px solid #D4E9F7;
+                    width: 280px;
+                    height: 280px;
+                }
+                @media (max-width: $screen_sm_max) {
+                    width: 180px;
+                    height: 180px;
+                }
+                @media (max-width: 360px) {
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+            .photo_wrap_reverse {
+                @media (max-width: $screen_xs_max) {
+                    left: 11%;
+                }
+            }
+        }
+    }
+}
+
+// ========================================================== / section_intro ===============
+// ---------------------------------------------------------- section_anketa ----------------
+.section_anketa {
+    .section_title {
+        @media (max-width: $screen_md_max) {
+            margin-bottom: 26px;
+            text-align: start;
+        }
+    }
+    .anketa_area {
+        display: flex;
+        justify-content: center;
+        background: #FBFBFB;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.51);
+        border-radius: 10px;
+        overflow: hidden;
+        .anketa_photo {
+            max-width: 506px;
+            width: 100%;
+            background: url(../assets/photo-1555991415-a6a1dc2f950b1.jpg) no-repeat 50% 50%;
             @media (max-width: $screen_md_max) {
                 display: none;
             }
         }
-        .contacts_wrap {
-            padding-top: 50px;
-            width: 100%;
-            background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
-            .logo_mob {
-                text-align: center;
-                margin-bottom: 15px;
-                img {
-                    width: 70px;
-                }
-            }
+        .anketa_form {
             @media (min-width: $screen_sm) {
-                padding-bottom: 50px;
-                .logo_mob {
-                    display: none;
+                padding: 53px 40px 62px 76px;
+            }
+            @media (max-width: $screen_md_max) {
+                padding: 25px 20px 30px;
+            }
+            &__title {
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 40px;
+                color: $main_brand_color;
+                margin-bottom: 40px;
+                @media (max-width: $screen_xs_max) {
+                    font-size: 16px;
+                    line-height: 21px;
+                    color: #13366C;
+                    margin-bottom: 20px;
                 }
             }
-            .contacts_area {
-                flex: auto;
+            .forma {
                 display: flex;
-                justify-content: center;
-                @media (max-width: $screen_xs_max) {
-                    ul {
-                        margin: 0;
+                flex-direction: column;
+                align-items: center;
+                input {
+                    width: 100%;
+                    margin-bottom: 15px;
+                    padding: 16px 21px;
+                    background: #FFFFFF;
+                    border: 1px solid rgba(181, 181, 181, 0.47);
+                    border-radius: 5px;
+                    outline: none;
+                    &:focus {
+                        box-shadow: inset 0px 0px 0px 1px rgba(181, 181, 181, 0.47);
                     }
                 }
-                ul {
-                    list-style: none;
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    align-content: space-between;
-                    max-width: 1000px;
-                    width: 100%;
-                    margin: 0 0 0 50px;
-                    padding: 0;
-                    @media (min-width: $screen_md) {
-                        height: 150px;
-                    }
+                button {
+                    margin-top: 40px;
                     @media (max-width: $screen_xs_max) {
-                        margin: 0;
-                        justify-content: start;
-                        height: 290px;
-                        li {
-                            font-weight: 600;
-                            font-size: 16px;
-                            line-height: 21px;
-                            margin-bottom: 10px;
-                            max-width: 140px;
-                        }
-                        .ul_main {
-                            order: 1;
-                        }
-                        .ul_about {
-                            order: 2;
-                        }
-                        .ul_anketa {
-                            order: 5;
-                        }
-                        .ul_contacts {
-                            order: 3;
-                            max-width: 180px;
-                            margin: 40px 0;
-                            .contact_description {
-                                margin-top: 0;
-                            }
-                        }
-                        .ul_vacancy {
-                            order: 4;
-                        }
-                        .ul_write_to_us {
-                            order: 6;
-                            margin-top: 25px;
-                            &>a {
-                                display: none;
-                            }
-                            .social {
-                                display: flex;
-                                flex-direction: column;
-                                align-content: center;
-                                height: 100%;
-                                img {
-                                    width: 33px;
-                                }
-                            }
-                        }
-                    }
-                    li {
-                        max-width: 200px;
-                        font-weight: bold;
-                        font-size: 18px;
-                        color: #FFFFFF;
-                        .contact_description {
-                            margin-top: 10px;
-                            line-height: 25px;
-                            font-weight: 300;
-                        }
-                    }
-                    .social {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        max-width: 200px;
-                        height: 25px;
-                        margin-top: 10px;
-                        margin-left: 0;
-                        @media (min-width: $screen_sm) {
-                            li+li {
-                                margin-left: 13px;
-                            }
-                        }
-                        li {
-                            width: 25px;
-                        }
-                        img {
-                            width: 25px;
-                        }
+                        margin-top: 20px;
                     }
                 }
             }
         }
     }
-    
-    // ========================================================== / section_contacts ============
+}
+
+// ========================================================== / section_anketa ==============
+// ---------------------------------------------------------- section_FAQ -------------------
+.section_FAQ {
+    background: #13366C;
+    .section_title {
+        color: #fff;
+        // max-width: 150px;
+        @media (min-width: $screen_sm) {
+            margin-left: 100px;
+        }
+        @media (max-width: $screen_xs_max) {
+            margin-bottom: 26px;
+        }
+    }
+    .faq_area_item {
+        max-width: 642px;
+        &+.faq_area_item {
+            margin-top: 20px;
+        }
+        .toggle {
+            display: flex;
+            justify-content: space-between;
+            background: #FFFFFF;
+            border-radius: 10px;
+            padding: 12px 27px;
+            width: 100%;
+            font-size: 18px;
+            line-height: 25px;
+            color: #13366C;
+            img {
+                margin-left: 8px;
+            }
+            @media (max-width: $screen_xs_max) {
+                padding: 12px 20px;
+                font-size: 16px;
+                line-height: 21px;
+            }
+        }
+    }
+    @media (min-width: $screen_lg) {
+        .section_FAQ_wrap {
+            display: flex;
+            .faq_area {
+                margin-left: 300px;
+                flex: auto;
+            }
+        }
+    }
+    // --------------------------------
+    .accordion {
+        list-style: none;
+        padding: 0;
+        .toggle {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.11);
+            cursor: pointer;
+            img {
+                transition: .3s;
+            }
+        }
+        .toggle_active {
+            position: relative;
+            z-index: 15;
+            img {
+                transform: rotate(180deg);
+            }
+        }
+        .inner {
+            position: relative;
+            top: -10px;
+            overflow: hidden;
+            display: none;
+            background: #FFFFFF;
+            border-radius: 0px 0px 10px 10px;
+            padding: 32px 20px 22px;
+            font-size: 16px;
+            line-height: 21px;
+            color: rgba(73, 73, 73, 0.7);
+        }
+    }
+    // --------------------------------
+}
+
+// ========================================================== / section_FAQ =================
+// ---------------------------------------------------------- section_contacts --------------
+.section_contacts {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    .logo {
+        width: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 100px;
+        }
+        @media (max-width: $screen_md_max) {
+            display: none;
+        }
+    }
+    .contacts_wrap {
+        padding-top: 50px;
+        width: 100%;
+        background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
+        .logo_mob {
+            text-align: center;
+            margin-bottom: 15px;
+            img {
+                width: 70px;
+            }
+        }
+        @media (min-width: $screen_sm) {
+            padding-bottom: 50px;
+            .logo_mob {
+                display: none;
+            }
+        }
+        .contacts_area {
+            flex: auto;
+            display: flex;
+            justify-content: center;
+            @media (max-width: $screen_xs_max) {
+                ul {
+                    margin: 0;
+                }
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-content: space-between;
+                max-width: 1000px;
+                width: 100%;
+                margin: 0 0 0 50px;
+                padding: 0;
+                @media (min-width: $screen_md) {
+                    height: 150px;
+                }
+                @media (max-width: $screen_xs_max) {
+                    margin: 0;
+                    justify-content: start;
+                    height: 290px;
+                    li {
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 21px;
+                        margin-bottom: 10px;
+                        max-width: 140px;
+                    }
+                    .ul_main {
+                        order: 1;
+                    }
+                    .ul_about {
+                        order: 2;
+                    }
+                    .ul_anketa {
+                        order: 5;
+                    }
+                    .ul_contacts {
+                        order: 3;
+                        max-width: 180px;
+                        margin: 40px 0;
+                        .contact_description {
+                            margin-top: 0;
+                        }
+                    }
+                    .ul_vacancy {
+                        order: 4;
+                    }
+                    .ul_write_to_us {
+                        order: 6;
+                        margin-top: 25px;
+                        &>a {
+                            display: none;
+                        }
+                        .social {
+                            display: flex;
+                            flex-direction: column;
+                            align-content: center;
+                            height: 100%;
+                            img {
+                                width: 33px;
+                            }
+                        }
+                    }
+                }
+                li {
+                    max-width: 200px;
+                    font-weight: bold;
+                    font-size: 18px;
+                    color: #FFFFFF;
+                    .contact_description {
+                        margin-top: 10px;
+                        line-height: 25px;
+                        font-weight: 300;
+                    }
+                }
+                .social {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    max-width: 200px;
+                    height: 25px;
+                    margin-top: 10px;
+                    margin-left: 0;
+                    @media (min-width: $screen_sm) {
+                        li+li {
+                            margin-left: 13px;
+                        }
+                    }
+                    li {
+                        width: 25px;
+                    }
+                    img {
+                        width: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ========================================================== / section_contacts ============
