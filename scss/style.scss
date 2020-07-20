@@ -97,6 +97,13 @@
         }
     }
     
+    @media (max-width: 360px) {
+        .inner_wrapper {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    
     // ========================================================== / commons =====================
     // ---------------------------------------------------------- section_intro -----------------
     .section_intro {
@@ -104,7 +111,15 @@
         padding-bottom: 0;
         display: flex;
         flex-direction: column;
-        @media (max-width: $screen_xs_max) {
+        .logo {
+            img {
+                width: 69px;
+                @media (max-width: $screen_xs_max) {
+                    width: 41px;
+                }
+            }
+        }
+        @media (max-width: $screen_lg_max) {
             height: 100vh;
         }
         ul {
@@ -126,7 +141,7 @@
                         font-size: 18px;
                         line-height: 25px;
                     }
-                    @media (min-width: $screen_sm) {
+                    @media (min-width: $screen_lg) {
                         li+li {
                             margin-left: 57px;
                         }
@@ -145,7 +160,7 @@
                 #menu_toggle {
                     display: none;
                 }
-                @media (max-width: $screen_md) {
+                @media (max-width: $screen_md_max) {
                     #menu_toggle {
                         opacity: 0;
                         &:checked~.menu_btn {
@@ -249,6 +264,11 @@
                         }
                     }
                 }
+                @media (min-width: $screen_md) and (max-width: $screen_md_max) {
+                    .menu_box {
+                        margin-left: 70%;
+                    }
+                }
             }
         }
         .intro_banner {
@@ -268,9 +288,10 @@
                 color: #000;
                 flex-direction: column;
                 justify-content: space-between;
-                @media (max-width: $screen_xs_max) {
+                @media (max-width: $screen_md_max) {
                     align-items: center;
                     height: 278px;
+                    max-width: 500px;
                 }
                 &__title {
                     margin-top: 3vh;
@@ -368,6 +389,14 @@
             }
             .advantages_item+.advantages_item {
                 margin-left: 15px;
+            }
+        }
+        @media (min-width: $screen_sm) and (max-width: $screen_md_max) {
+            .advantages_area {
+                align-items: center;
+                .advantages_item+.advantages_item {
+                    margin-top: 30px;
+                }
             }
         }
         .section_title {
@@ -531,6 +560,12 @@
         .reviews_subtitle_area {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            @media (min-width: $screen_sm) and (max-width: $screen_md_max) {
+                .reviews_item+.reviews_item {
+                    margin-top: 53px;
+                }
+            }
             @media (max-width: $screen_xs_max) {
                 align-items: center;
                 background: #FAFAFA;
@@ -626,6 +661,17 @@
     // ---------------------------------------------------------- section_requirements ----------
     .section_requirements {
         background: rgba(169, 211, 238, 0.29);
+        @media (min-width: $screen_sm) and (max-width: $screen_md_max) {
+            .requirements_photo {
+                justify-content: center;
+            }
+            .section_title {
+                margin-top: 30px;
+            }
+            .requirements_text__buttons {
+                justify-content: center;
+            }
+        }
         @media (max-width: $screen_xs_max) {
             .section_title {
                 text-align: start;
@@ -776,20 +822,25 @@
                 display: none;
             }
         }
-        @media (max-width: $screen_xs_max) {
+        @media (max-width: $screen_md_max) {
             .vacancies_button {
                 display: none;
             }
         }
         .swiper-container {
             display: none;
-            @media (max-width: $screen_xs_max) {
+            @media (max-width: $screen_md_max) {
                 display: block;
                 .section_title {
                     margin-bottom: 26px;
                 }
+                .swiper-slide {
+                    display: flex;
+                    justify-content: center;
+                }
                 .vacancies_item {
                     text-align: center;
+                    max-width: 400px;
                     &__banner {
                         overflow: hidden;
                         width: 100%;
@@ -818,6 +869,7 @@
                 }
                 .vacancies_button_mob {
                     margin: 25px 0;
+                    text-align: center;
                 }
                 .swiper-pagination {
                     position: static;
@@ -861,12 +913,12 @@
             @media (max-width: $screen_md_max) {
                 padding: 50px 0;
             }
-            @media (min-width: $screen_md) {
+            @media (min-width: $screen_sm) {
                 position: relative;
                 padding: 100px;
                 .item_description {
                     position: absolute;
-                    top: 40%;
+                    top: 50%;
                     left: 7%;
                     max-width: 300px;
                     font-weight: 600;
@@ -905,6 +957,8 @@
             }
             .promo_text {
                 flex: 1;
+                display: flex;
+                align-items: center;
                 &__number {
                     font-weight: 800;
                     font-size: 192px;
@@ -912,7 +966,7 @@
                     color: #B5CFE4;
                     @media (max-width: $screen_sm_max) {
                         font-size: 136px;
-                        padding: 20px 0;
+                        // padding: 20px 0;
                     }
                 }
             }
@@ -920,6 +974,7 @@
                 flex: 1;
                 display: flex;
                 justify-content: center;
+                align-items: center;
                 .photo_wrap {
                     overflow: hidden;
                     border-radius: 12px;
@@ -928,27 +983,27 @@
                         height: 100%;
                         object-fit: cover;
                     }
-                }
-                @media (max-width: $screen_xs_max) {
-                    .photo_wrap {
+                    @media (max-width: $screen_xs_max) {
                         position: absolute;
                         right: 11%;
                     }
-                    .photo_wrap_reverse {
-                        left: 11%;
-                    }
-                }
-                @media (min-width: $screen_sm) {
-                    .photo_wrap {
+                    @media (min-width: $screen_sm) {
                         border: 6px solid #D4E9F7;
                         width: 280px;
                         height: 280px;
                     }
-                }
-                @media (max-width: $screen_sm_max) {
-                    .photo_wrap {
+                    @media (max-width: $screen_sm_max) {
                         width: 180px;
                         height: 180px;
+                    }
+                    @media (max-width: 360px) {
+                        width: 140px;
+                        height: 140px;
+                    }
+                }
+                .photo_wrap_reverse {
+                    @media (max-width: $screen_xs_max) {
+                        left: 11%;
                     }
                 }
             }
@@ -966,6 +1021,7 @@
         }
         .anketa_area {
             display: flex;
+            justify-content: center;
             background: #FBFBFB;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.51);
             border-radius: 10px;
@@ -1117,6 +1173,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            img {
+                width: 100px;
+            }
             @media (max-width: $screen_md_max) {
                 display: none;
             }
@@ -1128,6 +1187,9 @@
             .logo_mob {
                 text-align: center;
                 margin-bottom: 15px;
+                img {
+                    width: 70px;
+                }
             }
             @media (min-width: $screen_sm) {
                 padding-bottom: 50px;
