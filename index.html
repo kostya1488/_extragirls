@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sweet girls</title>
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
 
 
 
@@ -29,7 +29,7 @@
         <div class="intro_banner">
             <header class="header wrapper inner_wrapper">
                 <div class="logo">
-                    <a href=""><img src="assets/_logo.svg" alt=""></a>
+                    <a href=""><img src="assets/logo.svg" alt=""></a>
                 </div>
                 <nav>
                     <div class="hamburger_menu">
@@ -38,11 +38,11 @@
                       <span></span>
                     </label>
                         <ul class="menu_box">
-                            <li><a class="menu_item some_link active" href="#intro">Главная</a></li>
-                            <li><a class="menu_item some_link" href="#contacts">Контакты</a></li>
-                            <li><a class="menu_item some_link" href="#vacancies">Вакансии</a></li>
-                            <li><a class="menu_item some_link" href="#anketa">Анкета</a></li>
-                            <li><a class="menu_item some_link" href="#about">Про агенство</a></li>
+                            <li class="menu_item"><a class="some_link active" href="#intro">Главная</a></li>
+                            <li class="menu_item"><a class="some_link" href="#contacts">Контакты</a></li>
+                            <li class="menu_item"><a class="some_link" href="#vacancies">Вакансии</a></li>
+                            <li class="menu_item"><a class="some_link" href="#anketa">Анкета</a></li>
+                            <li class="menu_item"><a class="some_link" href="#about">Про агенство</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -64,7 +64,7 @@
             <div class="section_title">Наши приемущества</div>
             <div class="advantages_area">
                 <div class="advantages_item">
-                    <div class="advantages_item__icon"><img src="assets/advantages_icons/safety.svg" alt=""></div>
+                    <div class="advantages_item__icon"><img src="assets/svg/safety.svg" alt=""></div>
                     <div class="advantages_item__title">Безопасность</div>
                     <div class="advantages_item__description">
                         <p>- более 15 лет работы - 100% гарантия безупречного сотрудничества с нашим агентством; </p>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="advantages_item">
-                    <div class="advantages_item__icon"><img src="assets/advantages_icons/cash.svg" alt=""></div>
+                    <div class="advantages_item__icon"><img src="assets/svg/cash.svg" alt=""></div>
                     <div class="advantages_item__title">Доход</div>
                     <div class="advantages_item__description">
                         <p>- высокая своевременная оплата каждый день без задержек в размере от 6000$/месяц, так же хорошие чаевые и подарки от обеспеченных мужчин;</p>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
                 <div class="advantages_item">
-                    <div class="advantages_item__icon"><img src="assets/advantages_icons/house.svg" alt=""></div>
+                    <div class="advantages_item__icon"><img src="assets/svg/house.svg" alt=""></div>
                     <div class="advantages_item__title">Жилье</div>
                     <div class="advantages_item__description">
                         <p>- все сотрудницы обеспечиваются комфортабельным жильем в центре г. Киева это 3-х комнат. квартиры с евро ремонтом со всеми удобствами;</p>
@@ -97,7 +97,7 @@
     <section id="about" class="section_about">
         <div class="wrapper section_about_inner inner_wrapper">
             <div class="about_promo_images">
-                <img src="assets/about_1.jpg" alt="">
+                <img src="assets/about_mid.jpg" alt="">
             </div>
             <div class="about_promo_text">
                 <div class="section_title">О нашем агенстве</div>
@@ -156,17 +156,17 @@
             <div class="requirements_wrap">
                 <div class="requirements_photo">
                     <div class="photo_area">
-                        <img src="assets/photo.png" alt="">
+                        <img src="assets/requirement.png" alt="">
                     </div>
                 </div>
                 <div class="requirements_text">
                     <div class="section_title requirements_text__title">Ты можешь быть частью нашего агентсва!</div>
                     <div class="requirements_text__subtitle">Некоторые критерии которыми ты должна обладать</div>
                     <ul class="requirements_text__list">
-                        <li><img src="assets/bi_check-circle-fill.svg" alt="">Подтянутая фигура.</li>
-                        <li><img src="assets/bi_check-circle-fill.svg" alt="">Коммуникабельность – умение вести диалог на любые темы.</li>
-                        <li><img src="assets/bi_check-circle-fill.svg" alt="">Образованность.</li>
-                        <li><img src="assets/bi_check-circle-fill.svg" alt="">Знание основ психологии, что очень важно в общении со статусными мужчинами!</li>
+                        <li class="requirements_list_item"><img src="assets/svg/requirement_check_icon.svg" alt="">Подтянутая фигура.</li>
+                        <li class="requirements_list_item"><img src="assets/svg/requirement_check_icon.svg" alt="">Коммуникабельность – умение вести диалог на любые темы.</li>
+                        <li class="requirements_list_item"><img src="assets/svg/requirement_check_icon.svg" alt="">Образованность.</li>
+                        <li class="requirements_list_item"><img src="assets/svg/requirement_check_icon.svg" alt="">Знание основ психологии, что очень важно в общении со статусными мужчинами!</li>
                     </ul>
                     <div class="requirements_text__buttons">
                         <a href="#anketa" class="btn btn__main some_link">Заполнить анкету</a>
@@ -322,13 +322,16 @@
             <div class="anketa_photo"></div>
             <div class="anketa_form">
                 <div class="anketa_form__title">Заполняй анкету и зарабатывай прямо сейчас</div>
+                <div id="text_after_send">
+                    Анкета успешно <br> отправлена!
+                </div>
                 <form id="forma" class="forma">
                     <input type="text" name="name" placeholder="Имя">
                     <input type="text" name="city" placeholder="Город">
                     <input type="text" name="age" placeholder="Возраст">
                     <input type="text" name="param" placeholder="Рост/Вес">
                     <input type="text" name="tel" placeholder="Телефон">
-                    <button class="btn btn__main" type="button" onclick="ajaxFormRequest()">Отправить</button>
+                    <button class="btn btn__main" type="button" onclick="ajaxFormRequest('forma', 'text_after_send')">Отправить</button>
                 </form>
             </div>
         </div>
@@ -342,7 +345,7 @@
                 <div class="faq_area accordion">
                     <div class="faq_area_item">
                         <div class="toggle">В чем отличия элитного досуга от эскорта?
-                            <img src="assets/Group.svg" alt="">
+                            <img src="assets/svg/faq_toggle_icon.svg" alt="">
                         </div>
                         <div class="inner">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, accusantium non. Atque explicabo eum rem cum esse. Vel nesciunt cupiditate delectus excepturi est id. Temporibus alias corrupti eligendi voluptas necessitatibus?
@@ -350,7 +353,7 @@
                     </div>
                     <div class="faq_area_item">
                         <div class="toggle">В чем отличия элитного досуга от эскорта?
-                            <img src="assets/Group.svg" alt="">
+                            <img src="assets/svg/faq_toggle_icon.svg" alt="">
                         </div>
                         <div class="inner">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, accusantium non. Atque explicabo eum rem cum esse. Vel nesciunt cupiditate delectus excepturi est id. Temporibus alias corrupti eligendi voluptas necessitatibus?
@@ -358,7 +361,7 @@
                     </div>
                     <div class="faq_area_item">
                         <div class="toggle">В чем отличия элитного досуга от эскорта?
-                            <img src="assets/Group.svg" alt="">
+                            <img src="assets/svg/faq_toggle_icon.svg" alt="">
                         </div>
                         <div class="inner">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, accusantium non. Atque explicabo eum rem cum esse. Vel nesciunt cupiditate delectus excepturi est id. Temporibus alias corrupti eligendi voluptas necessitatibus?
@@ -366,7 +369,7 @@
                     </div>
                     <div class="faq_area_item">
                         <div class="toggle">В чем отличия элитного досуга от эскорта?
-                            <img src="assets/Group.svg" alt="">
+                            <img src="assets/svg/faq_toggle_icon.svg" alt="">
                         </div>
                         <div class="inner">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, accusantium non. Atque explicabo eum rem cum esse. Vel nesciunt cupiditate delectus excepturi est id. Temporibus alias corrupti eligendi voluptas necessitatibus?
@@ -374,7 +377,7 @@
                     </div>
                     <div class="faq_area_item">
                         <div class="toggle">В чем отличия элитного досуга от эскорта?
-                            <img src="assets/Group.svg" alt="">
+                            <img src="assets/svg/faq_toggle_icon.svg" alt="">
                         </div>
                         <div class="inner">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, accusantium non. Atque explicabo eum rem cum esse. Vel nesciunt cupiditate delectus excepturi est id. Temporibus alias corrupti eligendi voluptas necessitatibus?
@@ -391,44 +394,34 @@
     <!-- ------------------------------------------------- contacts --------------------------------------------------- -->
     <section id="contacts" class="section_contacts inner_wrapper">
         <div class="logo">
-            <img src="assets/_logo.svg" alt="">
+            <img src="assets/logo.svg" alt="">
         </div>
 
 
 
         <div class="contacts_wrap inner_wrapper">
             <div class="logo_mob">
-                <img src="assets/_logo-inverse.svg" alt="">
+                <img src="assets/logo_inverse.svg" alt="">
             </div>
             <div class="contacts_area">
-                <ul>
-                    <li class="ul_main">
-                        <a class="some_link" href="#intro">Главная</a>
-                    </li>
-                    <li class="ul_about">
-                        <a class="some_link" href="#about">Про агенство</a>
-                    </li>
-                    <li class="ul_anketa">
-                        <a class="some_link" href="#anketa">Анкета</a>
-                    </li>
-                    <li class="ul_contacts">
-                        <a class="some_link" href="#contacts">Контакты</a>
+                <ul class="footer_menu">
+                    <li class="menu_item ul_main"><a class="some_link" href="#intro">Главная</a></li>
+                    <li class="menu_item ul_about"><a class="some_link" href="#about">Про агенство</a></li>
+                    <li class="menu_item ul_anketa"><a class="some_link" href="#anketa">Анкета</a></li>
+                    <li class="menu_item ul_contacts"><a class="some_link" href="#contacts">Контакты</a>
                         <div class="contact_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat adipiscing .</div>
                     </li>
-                    <li class="ul_vacancy">
-                        <a class="some_link" href="#vacancies">Вакансии</a>
-                    </li>
-                    <li class="ul_write_to_us">
-                        <a class="some_link" href="#">Напиши нам</a>
+                    <li class="menu_item ul_vacancy"><a class="some_link" href="#vacancies">Вакансии</a></li>
+                    <li class="menu_item ul_write_to_us"><a class="some_link" href="#">Напиши нам</a>
                         <ul class="social">
                             <li>
-                                <a href="#"><img src="assets/social/logos_whatsapp.svg" alt=""></a>
+                                <a href="#"><img src="assets/svg/whatsapp.svg" alt=""></a>
                             </li>
                             <li>
-                                <a href="#"><img src="assets/social/logos_telegram.svg" alt=""></a>
+                                <a href="#"><img src="assets/svg/telegram.svg" alt=""></a>
                             </li>
                             <li>
-                                <a href="#"><img src="assets/iconfinder_Asset_38_6467930 (1).svg" alt=""></a>
+                                <a href="#"><img src="assets/svg/viber.svg" alt=""></a>
                             </li>
                         </ul>
                     </li>
@@ -437,6 +430,24 @@
         </div>
     </section>
     <!-- ================================================= / contacts ================================================= -->
+    <!-- ------------------------------------------------- social panel --------------------------------------------------- -->
+    <div class="social_panel">
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="social_panel__content">
+            <img class="toggle_icon" src="assets/svg/social_toggle_icon.svg" alt="">
+            <div class="social_box">
+                <div class="social_box__title">Напиши нам</div>
+                <span>
+                    <a href="#"><img src="assets/svg/whatsapp.svg" alt=""></a>
+                    <a href="#"><img src="assets/svg/telegram.svg" alt=""></a>                 
+                    <a href="#"><img src="assets/svg/viber.svg" alt=""></a>                
+                </span>
+            </div>
+        </label>
+    </div>
+    <!-- ================================================= / social panel ================================================= -->
+
+
     <script src="js/script.js"></script>
 </body>
 

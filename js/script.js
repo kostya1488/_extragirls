@@ -51,13 +51,20 @@ $('.toggle').click(function(e) {
 });
 
 // -------------------------------------------------------------------
-function ajaxFormRequest() {
-    $.ajax({
-        type: "POST",
-        url: "php/feedback.php",
-        data: $(this).serialize()
-    }).done(function() {
-        alert("hello");
-    });
-    return false;
+function ajaxFormRequest(form_id, resp_id) {
+    let forma = $('#' + form_id)
+    let respounse = $('#' + resp_id)
+
+    forma.click(function() {
+        $.ajax({
+            type: "POST",
+            url: "php/feedback.php",
+            data: $(this).serialize()
+        }).done(function() {
+            forma.hide();
+            respounse.show();
+        });
+        return false;
+
+    })
 }
