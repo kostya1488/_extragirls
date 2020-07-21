@@ -1,21 +1,13 @@
-// ------------------------------- smooth scrolling
-// $(function() {
-
-//     $('.some_link').on('click', function(e) {
-//         $('html,body').stop().animate({ scrollTop: $($(this).attr('href')).offset().top }, 300);
-//         e.preventDefault();
-//     });
-// });
+// ------------------------------ scroll
 $(function() {
-
     $('a').on('click', function(e) {
-        $('html,body').stop().animate({ scrollTop: $($(this).attr('href')).offset().top }, 300);
+        $('html,body').stop().animate({ scrollTop: $($(this).attr('href')).offset().top }, 500);
         e.preventDefault();
     });
 });
+// ------------------------------ scroll
 $('.menu_item').click(function(e) {
     e.preventDefault();
-
     var $this = $(this);
 
     if (!$this.hasClass('active')) {
@@ -23,7 +15,6 @@ $('.menu_item').click(function(e) {
         $this.addClass('active');
     }
 });
-
 // ------------------------------ swiper
 var Swipes = new Swiper('.swiper-container', {
     loop: true,
@@ -58,3 +49,15 @@ $('.toggle').click(function(e) {
         $this.next().slideToggle(350);
     }
 });
+
+// -------------------------------------------------------------------
+function ajaxFormRequest() {
+    $.ajax({
+        type: "POST",
+        url: "php/feedback.php",
+        data: $(this).serialize()
+    }).done(function() {
+        alert("hello");
+    });
+    return false;
+}

@@ -214,7 +214,6 @@ a {
       @media (max-width: 991px) {
         .section_intro .preview_outer .preview {
           align-items: center;
-          height: 278px;
           max-width: 500px; } }
       .section_intro .preview_outer .preview__title {
         margin-top: 3vh;
@@ -222,9 +221,11 @@ a {
         font-size: 24px;
         line-height: 31px; }
       .section_intro .preview_outer .preview__description {
+        margin-top: 3vh;
         font-size: 16px;
         line-height: 23px; }
       .section_intro .preview_outer .preview .btn {
+        margin-top: 3vh;
         margin-bottom: 3vh; }
   @media (min-width: 992px) {
     .section_intro .preview_outer {
@@ -243,9 +244,7 @@ a {
           max-width: 385px;
           font-size: 18px;
           line-height: 25px;
-          margin-bottom: 38px; }
-    .section_intro .intro_banner {
-      height: 100vh; } }
+          margin-bottom: 38px; } }
 
 .section_advantages .advantages_area {
   display: flex;
@@ -276,7 +275,7 @@ a {
     background: #FFFFFF;
     box-shadow: 0px 6.76923px 33.8462px rgba(0, 0, 0, 0.15);
     border-radius: 8.46154px;
-    max-width: 360px;
+    max-width: 400px;
     padding: 80px 40px; } }
 
 @media (max-width: 575px) {
@@ -922,9 +921,17 @@ a {
     justify-content: center; }
     .section_contacts .logo img {
       width: 100px; }
-    @media (max-width: 991px) {
-      .section_contacts .logo {
-        display: none; } }
+  @media (max-width: 991px) {
+    .section_contacts .logo {
+      display: none; }
+    .section_contacts .contacts_wrap {
+      padding-bottom: 0; } }
+  @media (min-width: 992px) {
+    .section_contacts .logo_mob {
+      display: none; } }
+  @media (min-width: 768px) {
+    .section_contacts .contacts_wrap {
+      padding-bottom: 50px; } }
   .section_contacts .contacts_wrap {
     padding-top: 50px;
     width: 100%;
@@ -934,11 +941,6 @@ a {
       margin-bottom: 15px; }
       .section_contacts .contacts_wrap .logo_mob img {
         width: 70px; }
-    @media (min-width: 576px) {
-      .section_contacts .contacts_wrap {
-        padding-bottom: 50px; }
-        .section_contacts .contacts_wrap .logo_mob {
-          display: none; } }
     .section_contacts .contacts_wrap .contacts_area {
       flex: auto;
       display: flex;
@@ -957,10 +959,10 @@ a {
         width: 100%;
         margin: 0 0 0 50px;
         padding: 0; }
-        @media (min-width: 768px) {
+        @media (min-width: 576px) {
           .section_contacts .contacts_wrap .contacts_area ul {
             height: 150px; } }
-        @media (max-width: 575px) {
+        @media (max-width: 767px) {
           .section_contacts .contacts_wrap .contacts_area ul {
             margin: 0;
             justify-content: start;
@@ -1014,7 +1016,7 @@ a {
           height: 25px;
           margin-top: 10px;
           margin-left: 0; }
-          @media (min-width: 576px) {
+          @media (min-width: 768px) {
             .section_contacts .contacts_wrap .contacts_area ul .social li + li {
               margin-left: 13px; } }
           .section_contacts .contacts_wrap .contacts_area ul .social li {
