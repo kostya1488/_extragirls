@@ -21,6 +21,24 @@ $screen_lg: 992px;
 $screen_xl: 1200px;
 // ========================================================== / variables ===================
 // ---------------------------------------------------------- commons -----------------------
+//------------------------ scrollbar
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    @include brand_bg_color();
+    transition: .3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darken($main_brand_color, 2%);
+}
+
 * {
     box-sizing: border-box;
 }
