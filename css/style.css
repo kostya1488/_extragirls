@@ -872,7 +872,7 @@ ul {
     .section_FAQ .toggle:hover {
       padding: 12px 35px; }
       .section_FAQ .toggle:hover img {
-        transform: rotate(45deg); }
+        transform: rotate(90deg); }
   .section_FAQ .accordion {
     list-style: none;
     padding: 0; }
@@ -1040,8 +1040,10 @@ ul {
     margin-right: 25px;
     cursor: pointer;
     transition: .3s; }
-  .social_panel__content:hover .toggle_icon {
-    transform: scale(1.3); }
+  .social_panel__content:hover {
+    right: 0; }
+    .social_panel__content:hover .toggle_icon {
+      transform: scale(1.3); }
 
 .social_panel .social_box__title {
   font-weight: 600;

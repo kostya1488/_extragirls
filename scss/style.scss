@@ -1145,7 +1145,7 @@ ul {
         }
         &:hover {
             img {
-                transform: rotate(45deg);
+                transform: rotate(90deg);
             }
             padding: 12px 35px;
         }
@@ -1376,8 +1376,11 @@ ul {
             cursor: pointer;
             transition: .3s;
         }
-        &:hover .toggle_icon {
-            transform: scale(1.3);
+        &:hover {
+            right: 0;
+            .toggle_icon {
+                transform: scale(1.3);
+            }
         }
     }
     .social_box {
