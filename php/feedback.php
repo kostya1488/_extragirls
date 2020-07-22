@@ -5,18 +5,18 @@ $token = "1259640433:AAGvBUTYlAphhuxivlk5Orxi67uVOAOgsoQ";
 $chat_id = "-433092829";
 
 $name = trim($_POST["name"]);
+$tel = trim($_POST["tel"]);
 $city = trim($_POST["city"]);
 $age = trim($_POST["age"]);
 $param = trim($_POST["param"]);
-$tel = trim($_POST["tel"]);
-$message = "Имя: $name \nГород: $city \nВозраст: $age \nРост/Вес: $param \nТелефон: $tel";
+$message = "Имя: $name \nТелефон: $tel \nГород: $city \nВозраст: $age \nРост/Вес: $param ";
 
 $arr = array(
   'Имя пользователя: ' => $name,
+  'Телефон' => $tel,
   'Город' => $city,
   'Возраст' => $age,
-  'Рост/Вес' => $param,
-  'Телефон' => $tel
+  'Рост/Вес' => $param
 );
  
 foreach($arr as $key => $value) {

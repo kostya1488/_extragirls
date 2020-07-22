@@ -38,11 +38,11 @@
                       <span></span>
                     </label>
                         <ul class="menu_box">
-                            <li class="menu_item"><a class="some_link active" href="#intro">Главная</a></li>
-                            <li class="menu_item"><a class="some_link" href="#contacts">Контакты</a></li>
-                            <li class="menu_item"><a class="some_link" href="#vacancies">Вакансии</a></li>
-                            <li class="menu_item"><a class="some_link" href="#anketa">Анкета</a></li>
-                            <li class="menu_item"><a class="some_link" href="#about">Про агенство</a></li>
+                            <li class="menu_item"><a class="menu_item_link some_link active" href="#intro">Главная</a></li>
+                            <li class="menu_item"><a class="menu_item_link some_link" href="#contacts">Контакты</a></li>
+                            <li class="menu_item"><a class="menu_item_link some_link" href="#vacancies">Вакансии</a></li>
+                            <li class="menu_item"><a class="menu_item_link some_link" href="#anketa">Анкета</a></li>
+                            <li class="menu_item"><a class="menu_item_link some_link" href="#about">Про агенство</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -69,7 +69,6 @@
                     <div class="advantages_item__description">
                         <p>- более 15 лет работы - 100% гарантия безупречного сотрудничества с нашим агентством; </p>
                         <p>- собственная служба безопасности, система включает в себя несколько уровней проверки клиентов; </p>
-                        <p>- взаимоотношения между моделью и агентством хранятся в секрете. </p>
                     </div>
                 </div>
                 <div class="advantages_item">
@@ -170,7 +169,6 @@
                     </ul>
                     <div class="requirements_text__buttons">
                         <a href="#anketa" class="btn btn__main some_link">Заполнить анкету</a>
-                        <a href="#anketa" class="btn btn__secondary some_link">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -326,12 +324,13 @@
                     Анкета успешно <br> отправлена!
                 </div>
                 <form id="forma" class="forma">
-                    <input type="text" name="name" placeholder="Имя">
+                    <input type="text" name="name" placeholder="Имя*" required>
+                    <input type="text" name="tel" placeholder="Телефон*" required>
+
                     <input type="text" name="city" placeholder="Город">
                     <input type="text" name="age" placeholder="Возраст">
                     <input type="text" name="param" placeholder="Рост/Вес">
-                    <input type="text" name="tel" placeholder="Телефон">
-                    <button class="btn btn__main" type="button" onclick="ajaxFormRequest('forma', 'text_after_send')">Отправить</button>
+                    <button class="btn btn__main" onclick="ajaxFormRequest('forma', 'text_after_send')">Отправить</button>
                 </form>
             </div>
         </div>

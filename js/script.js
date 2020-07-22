@@ -6,12 +6,12 @@ $(function() {
     });
 });
 // ------------------------------ scroll
-$('.menu_item').click(function(e) {
+$('.menu_item_link').click(function(e) {
     e.preventDefault();
     var $this = $(this);
 
     if (!$this.hasClass('active')) {
-        $this.parent().parent().find('.menu_item').removeClass('active');
+        $this.parent().parent().find('.menu_item_link').removeClass('active');
         $this.addClass('active');
     }
 });
@@ -55,7 +55,7 @@ function ajaxFormRequest(form_id, resp_id) {
     let forma = $('#' + form_id)
     let respounse = $('#' + resp_id)
 
-    forma.click(function() {
+    forma.submit(function() {
         $.ajax({
             type: "POST",
             url: "php/feedback.php",
