@@ -141,7 +141,6 @@ ul {
     padding-bottom: 0;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     .logo img {
         width: 69px;
     }
@@ -152,7 +151,7 @@ ul {
     .intro_banner {
         background: url(../assets/banner.jpg) no-repeat 86% 0%;
         background-size: cover;
-        height: 100%;
+        height: 375px;
     }
     .preview_outer {
         display: flex;
@@ -176,8 +175,8 @@ ul {
             line-height: 23px;
         }
         .btn {
-            margin-top: 3vh;
-            margin-bottom: 3vh;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
     }
     .active {
@@ -341,6 +340,10 @@ ul {
 // ========================================================== / section_intro ===============
 // ---------------------------------------------------------- section_advantages ------------
 .section_advantages {
+    padding-top: 0;
+    .inner_wrapper {
+        padding-top: 50px;
+    }
     .advantages_area {
         display: flex;
         flex-direction: column;
@@ -386,7 +389,7 @@ ul {
             transition: .3s;
             &:hover {
                 box-shadow: 0px 6.76923px 33.8462px rgba(0, 0, 0, 0.4);
-                transform: scale(1.01);
+                // transform: scale(1.01);
             }
         }
     }
@@ -551,15 +554,16 @@ ul {
     }
     @media (min-width: $screen_sm) {
         .reviews_outer {
-            padding: 80px 100px;
+            padding: 80px 50px;
         }
         .reviews_title {
             margin-bottom: 24px;
         }
         .reviews_item {
             position: relative;
-            max-width: 280px;
-            padding: 48px 27px;
+            max-width: 420px;
+            // min-height: 620px;
+            padding: 50px 20px;
             background: #FFFFFF;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
             border-radius: 5px;
@@ -781,11 +785,11 @@ ul {
     }
     .vacancies_area {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-bottom: 58px;
     }
     .vacancies_item {
-        max-width: 280px;
+        max-width: 320px;
         &__banner {
             overflow: hidden;
             max-height: 300px;
@@ -1148,7 +1152,7 @@ ul {
             img {
                 transform: rotate(90deg);
             }
-            padding: 12px 35px;
+            // padding: 12px 35px;
         }
     }
     .accordion {
