@@ -141,8 +141,15 @@ ul {
     padding-bottom: 0;
     display: flex;
     flex-direction: column;
-    .logo img {
-        width: 69px;
+    height: 100vh;
+    .logo {
+        width: 140px;
+        img {
+            width: 69px;
+        }
+        .contact_description div {
+            margin-top: 10px;
+        }
     }
     .header {
         margin-top: 26px;
@@ -151,7 +158,7 @@ ul {
     .intro_banner {
         background: url(../assets/banner.jpg) no-repeat 86% 0%;
         background-size: cover;
-        height: 375px;
+        height: 100%;
     }
     .preview_outer {
         display: flex;
@@ -328,6 +335,7 @@ ul {
         }
     }
     @media (max-width: $screen_xs_max) {
+        height: 90vh;
         .logo img {
             width: 41px;
         }
@@ -340,9 +348,12 @@ ul {
 // ========================================================== / section_intro ===============
 // ---------------------------------------------------------- section_advantages ------------
 .section_advantages {
-    padding-top: 0;
-    .inner_wrapper {
-        padding-top: 50px;
+    // padding-top: 0;
+    // .inner_wrapper {
+    //     padding-top: 50px;
+    // }
+    .section_title {
+        margin-top: 50px;
     }
     .advantages_area {
         display: flex;
@@ -568,6 +579,7 @@ ul {
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
             border-radius: 5px;
             margin-top: 33px;
+            transition: .3s;
             &__photo {
                 position: absolute;
                 top: -33px;
@@ -596,6 +608,11 @@ ul {
                 font-size: 18px;
                 line-height: 25px;
                 color: rgba(0, 0, 0, 0.9);
+            }
+            &:hover {
+                box-shadow: 0px 6.76923px 33.8462px rgba(0, 0, 0, 0.4);
+                // transform: scale(1.01);
+                z-index: 10;
             }
         }
     }
@@ -1115,8 +1132,14 @@ ul {
             color: $secondary_brand_color;
             margin-bottom: 20px;
         }
-        .forma button {
-            margin-top: 20px;
+        .FGanketa_form .forma {
+            input {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            button {
+                margin-top: 20px;
+            }
         }
     }
 }
@@ -1188,6 +1211,9 @@ ul {
     @media (min-width: $screen_lg) {
         .section_FAQ_wrap {
             display: flex;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
         }
         .faq_area {
             margin-left: 300px;
@@ -1235,6 +1261,7 @@ ul {
     }
     .contacts_wrap {
         padding-top: 50px;
+        padding-bottom: 50px;
         width: 100%;
         background: linear-gradient(90deg, #E52D27 0%, #B31217 100%);
     }
@@ -1287,9 +1314,6 @@ ul {
         }
     }
     @media (min-width: $screen_md) {
-        .contacts_wrap {
-            padding-bottom: 50px;
-        }
         .social {
             li+li {
                 margin-left: 13px;
@@ -1310,13 +1334,13 @@ ul {
         .footer_menu {
             margin: 0;
             justify-content: start;
-            height: 290px;
+            height: 230px;
         }
         .menu_item {
             font-weight: 600;
             font-size: 16px;
+            margin-top: 15px;
             line-height: 21px;
-            margin-bottom: 10px;
             max-width: 140px;
         }
         .ul_main {
@@ -1331,17 +1355,14 @@ ul {
         .ul_contacts {
             order: 3;
             max-width: 180px;
-            margin: 40px 0;
-            .contact_description {
-                margin-top: 0;
-            }
+            margin-bottom: 10px;
         }
         .ul_vacancy {
             order: 4;
         }
         .ul_write_to_us {
             order: 6;
-            margin-top: 25px;
+            // margin-top: 25px;
             &>a {
                 display: none;
             }
@@ -1351,6 +1372,7 @@ ul {
             flex-direction: column;
             align-content: center;
             height: 100%;
+            // margin-top: 6px;
             img {
                 width: 33px;
             }
