@@ -65,6 +65,11 @@ function ajaxFormRequest(form_id, resp_id) {
             respounse.show();
         });
         return false;
-
     })
 }
+// -------------------------------------------------------------------
+
+$('.social_panel').click(function(e) {
+    e.preventDefault();
+    $(this).toggleClass('active')
+});
