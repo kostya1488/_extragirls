@@ -1,5 +1,5 @@
 <?php
-$recepient = "matvienkoigor956@gmail.com";
+$recepient = "info@extragirls.kiev.ua";
 $sitename = "extragirls.kiev.ua";
 $token = "1259640433:AAGvBUTYlAphhuxivlk5Orxi67uVOAOgsoQ"; 
 $chat_id = "-433092829";
